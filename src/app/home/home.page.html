@@ -1,20 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Navegaciones
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content padding>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-button routerLink="[/pagina2, valor]" expand="full" color="danger">
+    Navegación con linkRouter
+  </ion-button>
+
+  <ion-button (click)="enrutarPagina()" expand="full" color="success">
+    Navegación con Router
+  </ion-button>
+
+  <ion-button (click)="routingViaNavParams()" expand="full" color="primary">
+    Navegación con navCtrl
+  </ion-button>
 </ion-content>

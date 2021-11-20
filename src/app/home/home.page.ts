@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,19 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  valor = 'hola';
+
+  constructor(private router: Router,
+              private navCtrl: NavController) {
+
+              }
+
+  enrutarPagina(){
+    this.router.navigate(['/pagina2', this.valor]);
+  }
+
+  routingViaNavParams(){
+    this.navCtrl.navigateForward(['/pagina2', this.valor]);
+  }
 
 }
